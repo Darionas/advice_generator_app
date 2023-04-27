@@ -11,7 +11,7 @@
      /* neutral */
      --clr-grayish-blue: hsl(217, 19%, 38%);
      --clr-dark-grayish-blue: hsl(217, 19%, 24%);
-     --clr-dark-blue: (218, 23%, 16%);
+     --clr-dark-blue: hsl(218, 23%, 16%);
   
     /* typography */
     /* fonts */
@@ -38,8 +38,7 @@ body {
     display: flex;
     justify-content: center;
     font-family: var(--ff-primary);
-    font-size: var(--fs-16);
-    font-weight: var(--fw-500);
+    background-color: var(--clr-dark-blue);
 }
 
 /*---------------------Mobile layout-------------------------*/
@@ -47,41 +46,110 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-        'header'
         'main'
         'attribution';
     justify-items: center;
     justify-content: center;
+    align-content: center;
     max-width: 24rem;
+    /*border: 2px solid green;*/
 }
 
 /* style 1st component - mobile */
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'main_advice'
+        'main_hline'
+        'main_dice';
+    gap: 1.5rem;
+    margin: 1rem 0 0 0;
+    justify-items: center;
+    background-color: var(--clr-dark-grayish-blue);
+    border-radius: .8rem;
+    max-width: 92%;
+    padding: 1rem 1.2rem 2rem 1.2rem;
+    position: relative;
+}
 
+.main_advice {
+    text-align: center;
+}
+
+.main_advice-title {
+    font-size: .7rem;
+    font-weight: lighter;
+    color: var(--clr-neon-green);
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    padding: 1.2rem;
+    /*border: 2px solid white;*/
+}
+
+.main_advice-content {
+    font-size: var(--fs-28);
+    font-weight: var(--fw-800);
+    color: hsl(0, 0%, 100%);
+}
+
+.main_hline {
+    padding: .5rem 0 .5rem 0;
+}
+
+.main_dice {
+    display: grid;
+    grid-template-columns: 1f;
+    grid-template-areas:
+       'dice';
+    align-items: center;
+    justify-items: center;
+    border-radius: 50%;
+    min-width: 3.8rem;
+    min-height: 3.8rem;
+    background-color: var(--clr-neon-green);
+    position: absolute;
+}
 
 /* style 2nd component - mobile */
-
-
-/* style 3rd component - mobile */
-/*Component is styled in external css file*/
+.attribution {
+    margin: 7rem 0 0 0;
+}
 
 /*---------------------Desktop layout-------------------------*/
 @media screen and (min-width: 48rem) {
 
-
-
 /* style 1st component - desktop */
+.main {
+    min-width: 32rem !important;
+}
 
-
-/* style 2nd component - desktop */ 
-
-
-/*style 3rd component - desktop */
+/*style 2nd component - desktop */
 /*Component is styled in external css file*/
 
 }
 
 /*------------------grid area names---------------------------*/
 
+.main {
+    grid-area: main;
+}
+
+.main_advice {
+    grid-area: main_advice;
+}
+
+.main_hline {
+    grid-area: main_hline;
+}
+
+.main_dice {
+    grid-area: main_dice;
+}
+
+.dice {
+    grid-area: dice;
+}
 
 .attribution {
     grid-area: attribution;

@@ -6,28 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="keywords" content="Advice generator app" />
   <meta name="description" content=" Advice generator app challenge on Frontend Mentor" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="index.css" />
   <!--<script defer src="index.js"></script>-->
 </head>
 <body>
     <div class="grid_container">
-        <!--1st component-->
-        <header class="header">
-            <h1 class="advice_title">Advice #117</h1>
-        </header>
-        <!--2nd component-->
+       <!--1st component-->
         <main class="main">
-            <p class="advice_content">"It is easy to sit up and take notice, what's difficult is getting up and taking action."</p>
-            <picture class="advice_line">
+            <div class="main_advice">
+                <h1 class="main_advice-title">Advice #117</h1>
+                <p class="main_advice-content">"It is easy to sit up and take notice, what's difficult is getting up and taking action."</p>
+            </div>
+            <picture class="main_hline">
                 <source media="(max-width: 47.9375rem)" srcset="images/pattern-divider-mobile.svg">
                 <source media="(min-width: 48rem)" srcset="images/pattern-divider-desktop.svg">
                 <img src="images/pattern-divider-desktop.svg" alt="Pattern divider" />
             </picture>
-            <div class="advice_dice"><img class="dice" src="images/icon-dice.svg" alt="Dice" /></div>
+            <div class="main_dice"><img class="dice" src="images/icon-dice.svg" alt="Dice" /></div>
         </main>
-        <!--3rd component-->
+        <!--2nd component-->
         <footer class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
             Coded by <a href="#">@Darionas</a>.
