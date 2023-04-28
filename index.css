@@ -63,14 +63,13 @@ body {
         'main_advice'
         'main_hline'
         'main_dice';
-    gap: 1.5rem;
+    gap: 1rem;
     margin: 1rem 0 0 0;
     justify-items: center;
     background-color: var(--clr-dark-grayish-blue);
     border-radius: .8rem;
     max-width: 92%;
-    padding: 1rem 1.2rem 2rem 1.2rem;
-    position: relative;
+    padding: 1rem 1.2rem 0 1.2rem;
 }
 
 .main_advice {
@@ -94,21 +93,26 @@ body {
 }
 
 .main_hline {
-    padding: .5rem 0 .5rem 0;
+    padding: .5rem 0 0 0;
 }
 
 .main_dice {
     display: grid;
     grid-template-columns: 1f;
     grid-template-areas:
-       'dice';
-    align-items: center;
-    justify-items: center;
+       'dice_spinner';
     border-radius: 50%;
     min-width: 3.8rem;
     min-height: 3.8rem;
     background-color: var(--clr-neon-green);
+    position: relative;
+    top: 2rem;
+}
+
+.dice_spinner {
     position: absolute;
+    left: 32%;
+    top: 32%;
 }
 
 /* style 2nd component - mobile */
@@ -145,10 +149,6 @@ body {
 
 .main_dice {
     grid-area: main_dice;
-}
-
-.dice {
-    grid-area: dice;
 }
 
 .attribution {

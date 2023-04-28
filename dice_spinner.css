@@ -1,0 +1,39 @@
+
+.dice {
+	width: 1.5rem; /*this is related*/
+	height: 1.5rem; /*this is related*/
+}
+
+@keyframes spincube {
+    from,to {transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);}/*start*/
+    16% {transform: rotateY(-90deg);}/*2*/
+    33% {transform: rotateY(-90deg) rotateZ(90deg);}/*3*/
+    50% {transform: rotateY(-180deg) rotateZ(90deg);}/*4*/
+    66% {transform: rotateY(-180deg) rotateZ(90deg) rotateY(-90deg);}/*5*/
+    83% {transform: rotateY(-180deg) rotateZ(90deg) rotateY(-90deg) rotateZ(90deg);}/*6*/
+	100% {transform: rotateY(-180deg) rotateZ(90deg) rotateY(-90deg) rotateZ(90deg) rotateX(-90deg);}/*end*/
+  }
+
+  .dice_spinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+
+    transform-style: preserve-3d;
+    transform-origin: .7rem .7rem 0; /*this is related. It should be half size.*/
+  }
+
+  .dice_spinner div {
+    position: absolute;
+    width: 1.5rem; /*this is related*/
+    height: 1.5rem; /*this is related*/
+  }
+
+  /*this is related. translateZ should be half size.*/
+  .dice_spinner .face1 {transform: translateZ(.7rem);} 
+  .dice_spinner .face2 {transform: rotateY(90deg) translateZ(.7rem);}
+  .dice_spinner .face3 {transform: rotateY(90deg) rotateX(90deg) translateZ(.7rem);}
+  .dice_spinner .face4 {transform: rotateY(180deg) rotateZ(90deg) translateZ(.7rem);}
+  .dice_spinner .face5 {transform: rotateY(-90deg) rotateZ(90deg) translateZ(.7rem);}
+  .dice_spinner .face6 {transform: rotateX(-90deg) translateZ(.7rem);}

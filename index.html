@@ -9,6 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="dice_spinner.css" />
   <script defer src="index.js"></script>
 </head>
 <body>
@@ -16,15 +17,24 @@
        <!--1st component-->
         <main class="main">
             <div class="main_advice">
-                <h1 class="main_advice-title">Advice #117</h1>
-                <p class="main_advice-content">"It is easy to sit up and take notice, what's difficult is getting up and taking action."</p>
+                <h1 class="main_advice-title">Advice #<span class='num'></span></h1>
+                <p class="main_advice-content">"<span class='content'></span>"</p>
             </div>
             <picture class="main_hline">
                 <source media="(max-width: 47.9375rem)" srcset="images/pattern-divider-mobile.svg">
                 <source media="(min-width: 48rem)" srcset="images/pattern-divider-desktop.svg">
                 <img src="images/pattern-divider-desktop.svg" alt="Pattern divider" />
             </picture>
-            <div class="main_dice"><img class="dice" src="images/icon-dice.svg" alt="Dice" /></div>
+            <div class="main_dice">
+                <div class="dice_spinner">
+                    <div class="face1"><img class="dice" src="images/dices/dice-1.png" alt="Dice" /></div>
+                    <div class="face2"><img class="dice" src="images/dices/dice-2.png" alt="Dice" /></div>
+                    <div class="face3"><img class="dice" src="images/dices/dice-3.png" alt="Dice" /></div>
+                    <div class="face4"><img class="dice" src="images/dices/dice-4.png" alt="Dice" /></div>
+                    <div class="face5"><img class="dice" src="images/dices/dice-5.png" alt="Dice" /></div>
+                    <div class="face6"><img class="dice" src="images/dices/dice-6.png" alt="Dice" /></div>
+                </div>
+            </div>
         </main>
         <!--2nd component-->
         <footer class="attribution">
