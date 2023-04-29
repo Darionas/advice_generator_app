@@ -97,10 +97,6 @@ body {
 }
 
 .main_dice {
-    display: grid;
-    grid-template-columns: 1f;
-    grid-template-areas:
-       'dice_spinner';
     border-radius: 50%;
     min-width: 3.8rem;
     min-height: 3.8rem;
@@ -125,7 +121,7 @@ body {
 
 /* style 1st component - desktop */
 .main {
-    min-width: 32rem !important;
+    min-width: 32rem;
 }
 
 /*style 2nd component - desktop */
@@ -145,10 +141,6 @@ body {
 
 .main_hline {
     grid-area: main_hline;
-}
-
-.main_dice {
-    grid-area: main_dice;
 }
 
 .attribution {

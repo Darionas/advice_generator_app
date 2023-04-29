@@ -1,9 +1,12 @@
-'use strict'
+'Use strict';
+/*jshint esversion: 8*/
 
 const num = document.querySelector('.num');
 const content = document.querySelector('.content');
 const dice = document.querySelector('.main_dice');
 
+
+//fetch data from API
 const fetchAdvice = async() => {
     const apiEndpoint = `https://api.adviceslip.com/advice`;
 
@@ -15,10 +18,11 @@ const fetchAdvice = async() => {
             content.innerHTML = data.slip.advice;
        })
        .catch(error => console.log("Error :", error));
-}
+};
 
 fetchAdvice();
 
+
 dice.addEventListener('click', () => {
     fetchAdvice();
-})
+});
