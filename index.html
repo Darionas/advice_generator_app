@@ -6,7 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="keywords" content="Advice generator app" />
   <meta name="description" content=" Advice generator app challenge on Frontend Mentor" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="msapplication-config" content="browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
+  <!--*******-->
+  
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="dice_spinner.css" />
@@ -42,5 +53,19 @@
             Coded by <a href="#">@Darionas</a>.
         </footer>
     </div>
+
+    <script>   
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js')
+              .then(registration => {
+                console.log('Service Worker is registered', registration.scope);
+              })
+              .catch(err => {
+                console.error('Registration failed:', err);
+              });
+          });
+        }
+    </script>
 </body>
 </html>
