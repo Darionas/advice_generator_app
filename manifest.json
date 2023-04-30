@@ -1,6 +1,7 @@
 {
     "name": "Advice generator",
     "short_name": "Advice generator",
+    "description": "This app generate advice on click dice",
     "start_url": "index.html",
     "orientation": "portrait-primary",
     "icons": [
