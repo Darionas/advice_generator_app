@@ -98,6 +98,7 @@ body {
 
 .main_dice {
     cursor: pointer;
+    border: none;
     border-radius: 50%;
     min-width: 3.8rem;
     min-height: 3.8rem;

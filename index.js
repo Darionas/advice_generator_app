@@ -9,19 +9,20 @@ const dice = document.querySelector('.main_dice');
 //fetch data from API
 const fetchAdvice = async() => {
     const apiEndpoint = `https://api.adviceslip.com/advice`;
-
     await fetch(apiEndpoint)
+    
        .then(response => response.json())
        .then(data => {
-            //console.log(data);
+            console.log(data);
             num.innerHTML = data.slip.id;
             content.innerHTML = data.slip.advice;
        })
        .catch(error => console.log("Error :", error));
 };
 
-fetchAdvice();
-
+window.onload = () => {
+    fetchAdvice();
+}
 
 dice.addEventListener('click', () => {
     fetchAdvice();
