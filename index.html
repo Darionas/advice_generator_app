@@ -43,5 +43,12 @@
             Coded by <a href="#">@Darionas</a>.
         </footer>
     </div>
+    <script>
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+    for(let registration of registrations) {
+        registration.unregister();
+    } 
+});
+    </script>
 </body>
 </html>
